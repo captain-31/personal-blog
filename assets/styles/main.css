@@ -1,0 +1,248 @@
+@import url("./global.css");
+@import url("./header.css");
+
+#blocks {
+  grid-gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.featured__post {
+  position: relative;
+}
+
+.featured__post img {
+  width: 250px;
+}
+
+.featured__post figcaption {
+  font-size: 28px;
+  margin: var(--base-rem) auto;
+}
+
+.blog-post__intro > section img {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.featured__post .tag {
+  background-color: #0336FF;
+  border-radius: 25px;
+  font-size: 0.75rem;
+  right: 40px;
+  padding: 0.317rem;
+  position: absolute;
+  top: 10px;
+}
+
+.blog-post__intro .post-title,
+.blog-post__intro .post-metadata,
+.blog-post__intro .post-content-intro,
+.blog-post__intro .read-more,
+.subscription-callout > * {
+  margin-left: var(--base-rem);
+}
+
+.blog-post__intro {
+  margin: var(--size-scale-1) auto;
+}
+
+.blog-post__intro .post-title {
+  font-size: var(--size-scale-1);
+}
+
+.blog-post__intro .post-metadata {
+  color: var(--gray);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.blog-post__intro .post-metadata * {
+  padding-right: 0.5rem;
+}
+
+.blog-post__intro .post-metadata *:not(:last-child)::after {
+  content: ".";
+  padding-left: 0.5rem;
+  transform: translateY(-3px);
+}
+
+.blog-post__intro .post-category {
+  color: var(--light-blue);
+}
+
+.blog-post__intro .post-content-intro {
+  color: var(--gray);
+  border-bottom: 1px solid var(--neutral-gray);
+  line-height: 1.2;
+  padding-bottom: var(--base-rem);
+}
+
+.blog-post__intro .read-more {
+  color: var(--light-blue);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.subscription-callout {
+  background-color: #C20F24;
+  margin: var(--size-scale-1) 0;
+  padding: var(--base-rem);
+  text-align: center;
+}
+
+.subscription-callout > p,
+.subscription-callout > h3 {
+  color: white;
+}
+
+.email-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-field input {
+  border: 0;
+  outline: 0;
+  padding: var(--base-rem);
+}
+
+.email-field button {
+  background: #0B1C3A;
+  border: 0;
+  color: white;
+  margin: var(--base-rem) 0;
+  padding: var(--base-rem);
+  font-size: 20px;
+}
+
+.footer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: var(--base-rem);
+}
+
+.social-links a {
+  font-size: 14px;
+  padding-right: 0.75rem;
+}
+
+.post_date {
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+#post-row figcaption {
+    font-size: 18px;
+}
+
+.social-icons img {
+    padding: 10px;
+}
+
+.social-icons img:hover {
+    cursor: pointer;
+}
+
+.blog-post__intro .social-icons img{
+    margin-top: 0;
+}
+
+.posts-row {
+    margin-top: 50px;
+}
+
+.posts-row h3 {
+    font-size: 30px;
+}
+
+@media (min-width: 768px) {
+
+  .featured {
+    display: grid;
+    grid-gap: 0.75rem;
+    grid-template-columns: repeat(4, 1fr);
+    margin: var(--size-scale-1) auto;
+  }
+
+  .nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .featured__post .tag {
+    right: 10px;
+    color: white;
+    background-color: #0336FF;
+  }
+
+  .featured__post img {
+    width: auto;
+  }
+
+  .blog-post__intro {
+    margin: var(--size-scale-1) var(--size-scale-3);
+  }
+
+  .blog-post__intro .post-title {
+    font-size: var(--size-scale-2);
+  }
+
+  .blog-post__intro .post-title,
+  .blog-post__intro .post-metadata,
+  .blog-post__intro .post-content-intro,
+  .blog-post__intro .read-more,
+  .subscription-callout > * {
+    margin-left: var(--size-scale-4);
+    margin-right: var(--size-scale-4);
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog-post__intro {
+    margin: var(--size-scale-1) var(--size-scale-4);
+  }
+}
+
+@media (min-width: 1200px) {
+  .featured__post .tag {
+    right: 20px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+ section#blocks {
+    padding: 0 22px;
+  }
+
+  section#post-row {
+      padding: 0 22px;
+  }
+
+  h3.posts-row {
+      padding: 0 22px;
+  }
+
+  .featured__post .tag {
+      right: 10px;
+      color: white;
+      letter-spacing: 0.5px;
+  }
+
+  .featured__post {
+      margin-bottom: 30px;
+  }
+
+  .featured__post img {
+    width: 100%;
+  }
+  
+}
